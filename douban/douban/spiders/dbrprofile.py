@@ -1,10 +1,10 @@
 import scrapy
-from doubanbook.items import DbbookItem
+from douban.items import DbprofileItem
 import time
 from scrapy.http.request import Request  
 
-class DbbookSpider(scrapy.spiders.Spider):
-    name = "dbbook"
+class DbprofileSpider(scrapy.spiders.Spider):
+    name = "dbprofile"
     allowed_domains = ["douban.com"]
     start_urls = [
         "http://www.douban.com/people/48335885/",
@@ -20,7 +20,7 @@ class DbbookSpider(scrapy.spiders.Spider):
         #with open(filename, 'wb') as f:
         #    f.write(response.body)
         for sel in response.xpath('//html'):
-            item = DbbookItem()
+            item = DbprofileItem()
             item['title'] = sel.xpath('//head/title/text()').extract()
             item['intro'] = sel.xpath('//*[@id="intro_display"]/text()').extract()
             yield item

@@ -9,12 +9,12 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'doubanbook'
+BOT_NAME = 'douban'
 
-SPIDER_MODULES = ['doubanbook.spiders']
-NEWSPIDER_MODULE = 'doubanbook.spiders'
+SPIDER_MODULES = ['douban.spiders']
+NEWSPIDER_MODULE = 'douban.spiders'
 ITEM_PIPELINES = [
-    'doubanbook.pipelines.DbbookPipeline']
+    'douban.pipelines.DbprofilePipeline']
 
 USER_AGENTS = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
 

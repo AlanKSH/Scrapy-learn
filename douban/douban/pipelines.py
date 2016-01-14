@@ -3,7 +3,7 @@ import codecs
 from os import path
 from scrapy import signals
 
-class DbbookPipeline(object):
+class DbprofilePipeline(object):
     def __init__(self):
         self.file = codecs.open('raw_data.txt', 'w', "utf-8")
 
