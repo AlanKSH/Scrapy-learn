@@ -15,6 +15,4 @@ class MovieItem(Item):
     movie_director = Field()
     movie_writer = Field()
     movie_roles = Field()
-    movie_Language = Field()
-    movie_long = Field()
     movie_description = Field()
